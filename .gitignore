@@ -1,0 +1,27 @@
+*/config/development
+*/logs/log-*.php
+!*/logs/index.html
+*/cache/*
+!system/cache/*
+!*/cache/index.html
+!*/cache/.htaccess
+
+user_guide_src/build/*
+user_guide_src/cilexer/build/*
+user_guide_src/cilexer/dist/*
+user_guide_src/cilexer/pycilexer.egg-info/*
+
+#codeigniter 3
+
+/application/config/database.php
+
+*.sql
+/application/config/database.php
+/application/config/development/database.php
+/application/config/recaptcha.php
+/application/helpers/recaptcha_helper.php
+/application/modules/api/
+/application/modules/dashboard/views/index_project2.php
+/application/modules/meeting/views/masalah di ori.php
+/application/modules/reports/
+/application/modules/subsubject/
