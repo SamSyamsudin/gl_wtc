@@ -4,7 +4,7 @@
 	}
 </style>
 <?php
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 header("Content-type: application/octet-stream");
 header("Content-Disposition: attachment; filename=BUK_DETAIL_$tanggal-_-$tanggal2.xls"); //ganti nama sesuai keperluan
 header("Pragma: no-cache");

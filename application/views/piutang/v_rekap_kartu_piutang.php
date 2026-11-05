@@ -1,5 +1,5 @@
 <?php $this->load->view('header');
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 $Arr_Coa		= array();
 $Arr_Project	= array();
 if ($data_perkiraan) {

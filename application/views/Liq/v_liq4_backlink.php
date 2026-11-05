@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?= base_url("assets/pdf/style.css"); ?>">
 <?php
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 ?>
 <div class="modal fade bd-example-modal-xl" id="Mymodal4" tabindex="-1" role="dialog" aria-labelledby="myExtraLargeModalLabel" aria-hidden="true">
 	<div class="modal-dialog modal-xl modal-dialog-scrollable" style="width:95%; height:1000px" role="document">

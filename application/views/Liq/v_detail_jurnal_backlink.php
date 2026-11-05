@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?= base_url("assets/pdf/style.css"); ?>">
 <?php
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 ?>
 <div class="modal fade" id="Mymodal6">
 	<div class="modal-dialog modal-dialog-scrollable" style="width:80%; height:1000px">

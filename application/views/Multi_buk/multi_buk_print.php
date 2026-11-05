@@ -19,7 +19,7 @@
     }
 </style>
 <?php
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 $urutan = 0;
 $no_buk = explode(",", $nomor_buk);
 foreach ($no_buk as $key => $nobuk) {

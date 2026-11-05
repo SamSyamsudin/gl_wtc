@@ -1,5 +1,5 @@
 <?php $this->load->view('header');
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 ?>
 <section class="content-header">
   <h1>

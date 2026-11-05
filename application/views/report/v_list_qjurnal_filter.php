@@ -1,5 +1,5 @@
 <?php $this->load->view('header');
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 ?>
 <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>dist/jquery.timepicker.css">
 <section class="content-header">

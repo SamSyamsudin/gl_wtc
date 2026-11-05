@@ -17,6 +17,7 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 
 *.sql
 /application/config/database.php
+/application/config/config.php
 /application/config/development/database.php
 /application/config/recaptcha.php
 /application/helpers/recaptcha_helper.php

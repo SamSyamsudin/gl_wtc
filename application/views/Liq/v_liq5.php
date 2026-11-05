@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="<?= base_url("assets/pdf/style.css"); ?>">
 <?php
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 ?>
 
 <div id="space"></div>

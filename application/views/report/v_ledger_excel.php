@@ -4,7 +4,7 @@
 	}
 </style>
 <?php
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 header("Content-type: application/octet-stream");
 header("Content-Disposition: attachment; filename=Laporan_Ledger_$bln_ledger-$thn_ledger.xls"); //ganti nama sesuai keperluan
 header("Pragma: no-cache");

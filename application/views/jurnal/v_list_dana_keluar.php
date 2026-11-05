@@ -1,5 +1,5 @@
 <?php $this->load->view('header');
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 ?>
 <section class="content-header">
 	<h1>
@@ -91,6 +91,7 @@ error_reporting(E_ALL & ~E_NOTICE);
 											
 											
 
+											$totalrp = 0;
 											if ($data_uang_keluar_dari > 0) {
 												foreach ($data_uang_keluar_dari as $row_jurnal1) {
 													// print_r($row_jurnal1->nomor);

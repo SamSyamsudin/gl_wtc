@@ -1,8 +1,8 @@
 <?php $this->load->view('header');
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 $Arr_Coa		= array();
 $Arr_Project	= array();
-if ($data_perkiraan) {
+if (!empty($data_perkiraan)) {
 	foreach ($data_perkiraan as $key => $vals) {
 		$kode_Coa			= $vals->no_perkiraan . '^' . $vals->nama;
 		$Arr_Coa[$kode_Coa]	= $vals->no_perkiraan . '  ' . $vals->nama;
@@ -116,7 +116,7 @@ if ($data_perkiraan) {
 										$supp  = $this->db->query("SELECT * FROM waterco_demo.master_customers WHERE id_customer='$klien'")->row();
 											
 										echo "<tr><th colspan='8' style='text-align:center;font-size:15px;'><center>KARTU DEPOSIT<br>Periode :  " . date_format(new DateTime($awal), "d-m-Y") . " S/D ". date_format(new DateTime($akhir), "d-m-Y") ."</center></th></tr>";
-										echo "<tr><th colspan='8' style='text-align:center;font-size:15px;'><center>NAMA CUSTOMER : ". $supp->nm_customer . "</center></th></tr>";
+										echo "<tr><th colspan='8' style='text-align:center;font-size:15px;'><center>NAMA CUSTOMER : ". ($supp ? $supp->nm_customer : '') . "</center></th></tr>";
 										
 										?>
 									</tr>
@@ -174,6 +174,7 @@ if ($data_perkiraan) {
 											$sum_kredit = array();
 											$nilai_debet = array();
 											$nilai_kredit = array();
+											$tipe = isset($tipe) ? $tipe : '';
                                             if($klien=='0'){
 											$detail_jurnal	= $this->Kartupiutang_model->get_detail_kartu_deposit_all($awal,$akhir,$klien,$tipe);
 											}else{

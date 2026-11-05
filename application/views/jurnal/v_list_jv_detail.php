@@ -15,7 +15,7 @@ if ($cek_periode > 0) {
 	}
 }
 				
-error_reporting(E_ALL & ~E_NOTICE);
+error_reporting(E_ALL & ~E_NOTICE & ~E_DEPRECATED & ~E_WARNING);
 header("Content-type: application/octet-stream");
 header("Content-Disposition: attachment; filename=JV_DETAIL_$bln-$thn.xls"); //ganti nama sesuai keperluan
 header("Pragma: no-cache");
